@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    <ion-item *ngFor="let product of products">
+      <ion-thumbnail item-start>
+        <img [src]="product.foto"> 
+      </ion-thumbnail>
+      <ion-label item-content>
+        {{ product.nombre }}
+        <p>{{ product.descripcion }}</p>
+      </ion-label>
+      <ion-label text-right item-end color="secondary">
+        S/ {{ product.precio }}
+      </ion-label>
+
+
+    </ion-item>
+  </ion-list>
+</ion-content>
